@@ -1,0 +1,116 @@
+{
+  "schemaId": "project::XM::Backlog",
+  "schemaVersion": "0.1",
+  "description": "Intake Form",
+  "fields": {
+    "WS": {
+      "type": "string",
+      "label": "WS",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Item": {
+      "type": "string",
+      "label": "Item",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Description + Outcome": {
+      "type": "string",
+      "label": "Description + Outcome",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Status": {
+      "type": "enum",
+      "label": "Status",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Not started",
+          "In progress",
+          "Completed",
+          "Blocked",
+          "At Risk",
+          "Not Applicable"
+        ],
+        "acceptNewValues": false
+      },
+      "default": "Not started"
+    },
+    "Priority": {
+      "type": "enum",
+      "label": "Priority",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "UBN",
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "acceptNewValues": false
+      },
+      "default": "P2"
+    },
+    "Target Date": {
+      "type": "date",
+      "label": "Target Date",
+      "nullable": true
+    },
+    "Level Of Efforts": {
+      "type": "enum",
+      "label": "Level Of Efforts",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "5 min",
+          "10 min",
+          "20 min",
+          "30 min",
+          "45 min",
+          "1 hr",
+          "1.5 hrs",
+          "2 hrs",
+          "3 hrs",
+          "5 hrs",
+          "8 hrs",
+          "10 hrs",
+          "15 hrs",
+          "1 day",
+          "2 days",
+          "5 days",
+          "1 week",
+          "1.5 weeks",
+          "2 weeks",
+          "4 weeks",
+          "1 month",
+          "1.5 months",
+          "2 months",
+          "3 months",
+          "6 months",
+          "9 months",
+          "1 year",
+          "2 years",
+          "5 years",
+          "10 years"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  },
+  "section": {
+    "column": "WS",
+    "defaultInsertion": "top"
+  },
+  "sharePayloadMapping": {
+    "sharedText": "Item"
+  },
+  "shareTextMakeLink": true
+}
